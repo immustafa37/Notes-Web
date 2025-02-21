@@ -7,3 +7,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>My Notes</h1>
+      <button id="clearNotes" title="Clear All Notes">Clear All</button>
+    </header>
+
+    <section class="note-form">
+      <textarea id="noteInput" placeholder="Write your note here..."></textarea>
+      <button id="addNote">Add Note</button>
+    </section>
+
+    <section class="notes-display" id="notesDisplay">
+      <!-- Notes will be dynamically injected here -->
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
