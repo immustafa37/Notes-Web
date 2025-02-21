@@ -29,3 +29,38 @@ function updateLocalStorage() {
     localStorage.setItem('notes', JSON.stringify(notes));
   }
   
+// Add a new note
+addNoteBtn.addEventListener('click', () => {
+    const noteText = noteInput.value.trim();
+    if (noteText) {
+      notes.push(noteText);
+      updateLocalStorage();
+      displayNotes();
+      noteInput.value = '';
+      noteInput.focus();
+    } else {
+      alert('Please enter a note before adding.');
+    }
+  });
+  
+// Delete a note (event delegation)
+notesDisplay.addEventListener('click', (e) => {
+    if (e.target.classList.contains('delete-note')) {
+      const index = e.target.getAttribute('data-index');
+      notes.splice(index, 1);
+      updateLocalStorage();
+      displayNotes();
+    }
+  });
+
+// Clear all notes
+clearNotesBtn.addEventListener('click', () => {
+    if (confirm('Are you sure you want to clear all notes?')) {
+      notes = [];
+      updateLocalStorage();
+      displayNotes();
+    }
+  });
+
+// Initial display
+displayNotes();  
