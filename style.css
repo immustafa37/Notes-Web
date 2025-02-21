@@ -14,3 +14,56 @@
     padding: 20px;
   }
   
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+header h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+header button {
+    background: #e74c3c;
+    border: none;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  header button:hover {
+    background: #c0392b;
+  }
+  
+  /* Note Form */
+  .note-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .note-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 10px;
+  }  
